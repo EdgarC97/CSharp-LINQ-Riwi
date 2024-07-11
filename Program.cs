@@ -294,3 +294,15 @@
 // var wordBiggerThan10 = words.Any(word => word.Length > 10);
 
 // Console.WriteLine(wordBiggerThan10);
+
+//31. Verifica si todas las edades en una lista son mayores de 18.
+// var ages = new List<int>(){21,19,20,33,50,22};
+// var majorThan18 = ages.All(age => age > 18);
+
+// Console.WriteLine(string.Join("\n", majorThan18));
+
+//32. Comprueba si una lista de ciudades contiene la ciudad "Madrid".
+// var citys = new List<string>() {"Valencia","Madrid","Barcelona","Sevilla","Alicante","Mallorca"};
+// var containCity = citys.Contains("madrid"); 
+
+// Console.WriteLine(string.Join("\n", containCity));
