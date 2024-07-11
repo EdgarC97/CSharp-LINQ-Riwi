@@ -224,3 +224,73 @@
 // var convertToList = numbers.ToArray();
 
 // Console.WriteLine(convertToList);
+
+//22. Filtra los números negativos de una lista y ordénalos de menor a mayor.
+// var numbers = new List<int>(){-15,-33,-20,-50,};
+// var negNumbers = numbers.Where(num => num < 0).OrderBy(num => num);
+
+// Console.WriteLine(string.Join("\n",negNumbers));
+
+//23. Obtén una lista de longitudes de cada palabra en una lista de palabras.
+// var names = new List<string>() {"manzana","LINQ","banano","pera","sandia","guanabana"};
+// var namesLenght = names.Select(word => word.Length);
+
+// Console.WriteLine(string.Join("\n",namesLenght));
+
+//24. Ordena una lista de salarios de menor a mayor y obtén los 3 más bajos.
+// var salaries = new List<decimal>() {50000, 10000, 20000,120000,35000,12000,5000};
+// var lowestSalarys = salaries.OrderBy(salary => salary).Take(3);
+
+// Console.WriteLine(string.Join("\n",lowestSalarys));
+
+//25. Obtén los nombres más largos en una lista de nombres.
+// var names = new List<string>() {"manzana","LINQ","banano","pera","sandia","guanabana"};
+// var largeNames = names.OrderByDescending(word => word.Length).Take(3);//First() para la palabra mas larga instead of Take
+
+// Console.WriteLine(string.Join("\n",largeNames));
+
+//26. Encuentra el primer número mayor a 100 en una lista de precios.
+// var prices = new List<decimal>() {99,10,101,50000, 10000, 20000,120000,35000,12000};
+// var firstMajor100 = prices.Where(price => price > 100).First();
+
+// Console.WriteLine(firstMajor100);
+
+//27. Encuentra el último día del mes en una lista de fechas.
+
+// var dates = new List<DateTime>
+//         {
+//             new DateTime(2024, 1, 1),
+//             new DateTime(2024, 1, 15),
+//             new DateTime(2024, 1, 31),
+//             new DateTime(2024, 2, 1),
+//             new DateTime(2024, 2, 28),
+//             new DateTime(2024, 2, 29),
+//             new DateTime(2024, 3, 1),
+//             new DateTime(2024, 3, 31),
+//             new DateTime(2024, 3, 30)
+//         };
+
+//         var lastDaysOfMonth = dates
+//             .GroupBy(date => new { date.Month, date.Day })
+//             .Select(group => group.Max(date => date))
+//             .ToList();
+
+//         Console.WriteLine(string.Join("\n", lastDaysOfMonth));
+
+//28. Obtén el primer nombre que empieza con 'A' en una lista de nombres o un valor por defecto si no hay ninguno.
+// var names = new List<string>() {"Manzana","LINQ","Banano","Pera","Sandia","Arracacha","Guanabana"};
+// var firstAName = names.FirstOrDefault(name => name.StartsWith("A"))?? "No se encontró nombre con 'A'";// ?? es Para asignar valor por defecto
+
+// Console.WriteLine(firstAName);
+
+//29. Encuentra el último número impar en una lista de enteros o un valor por defecto si no hay ninguno.
+// var numbers = new List<int>(){17,19,20,33,50,15,12};
+// var lastInparNum = numbers.LastOrDefault(number => number % 2 != 0) ;
+
+// Console.WriteLine(lastInparNum);
+
+//30. Verifica si alguna palabra en una lista de palabras tiene más de 10 caracteres.
+// var words = new List<string>() {"manzana","LINQ","banano","pera","sandia","guanabana","quitate de la via perico"};
+// var wordBiggerThan10 = words.Any(word => word.Length > 10);
+
+// Console.WriteLine(wordBiggerThan10);
